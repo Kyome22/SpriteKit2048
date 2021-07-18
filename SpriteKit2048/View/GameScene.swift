@@ -100,12 +100,12 @@ class GameScene: SKScene {
         var x: CGFloat = 0.5 * (contentSize.width - scoreSize.width)
         let y: CGFloat = 0.5 * (contentSize.height - scoreSize.height)
         
-        bestScoreNode = ScoreNode(size: scoreSize, title: "BEST", score: gameModel.score)
+        bestScoreNode = ScoreNode(size: scoreSize, title: "BEST", score: gameModel.bestScore)
         bestScoreNode!.position = CGPoint(x: x, y: y)
         contentNode?.addChild(bestScoreNode!)
         
         x -= scoreSize.width + 8
-        scoreNode = ScoreNode(size: scoreSize, title: "SCORE", score: gameModel.bestScore)
+        scoreNode = ScoreNode(size: scoreSize, title: "SCORE", score: gameModel.score)
         scoreNode!.position = CGPoint(x: x, y: y)
         contentNode?.addChild(scoreNode!)
     }
